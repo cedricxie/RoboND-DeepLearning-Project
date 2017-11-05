@@ -8,6 +8,16 @@ In this project, you will train a deep neural network to identify and track a ta
 
 ### Fully Convolutional Neural Network Model
 
-![figure_cluster](images/fig_cluster.png)
+![Network Model](figures/network1.png)
 
 An encoder-decoder structure of a fully convolutional neural network (FCN) is implemented in the project.
+
+
+| Tables   |      Are                                                     |  Score |
+|----------|:------------------------------------------------------------:|-------:|
+| Baseline |  Learning Rate = 0.002; Batch Size = 100, Num of Epochs = 50 | 0.403  |
+| Trial 1  |  Num of Epochs = 10       |   0.002  |
+| Trial 2  |  Learning Rate = 0.0025   |   0.355  |
+| Trial 3  |  Learning Rate = 0.0015   |   0.330  |
+| Trial 4  |  Batch Size = 50          |   0.399  |
+| Trial 5  |  Three-Layer Network      |   0.395  |
