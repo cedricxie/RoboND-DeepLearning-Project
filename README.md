@@ -8,9 +8,11 @@ In this project, you will train a deep neural network to identify and track a ta
 
 ### Fully Convolutional Neural Network Model
 
-A fully convolutional neural network (FCN) with the encoder-decoder structure of is implemented in the project. The architecture of the model is demonstrated in the following figure. The sizes of each layer is described.
+A fully convolutional neural network (FCN) with the encoder-decoder structure of is implemented in the project. The architecture of the model is demonstrated in the following figure. In this figure, both the encoder and decoder have two layers. The sizes of each layer is described.
 
 ![Network Model](figures/network1.png)
+
+In the implementation later, a three-layer network in the encoder and decoder have been implemented as well to compare their difference in performance.
 
 #### Encoder
 The encoder here with separable convolution is to extract features in the image. The separable convolutions have fewer parameters compared to traditional convolutions and their advantages are:
@@ -33,8 +35,9 @@ The decoder is to up-sample the output from 1x1 convolution layer to the same si
 | Trial 2  |  Learning Rate = 0.0025   |   0.355  |
 | Trial 3  |  Learning Rate = 0.0015   |   0.330  |
 | Trial 4  |  Batch Size = 50          |   0.399  |
-| Trial 5  |  Three-Layer Network      |   0.394  |
-| Trial 5  |  Three-Layer Network, Batch Size = 50, Num of Epochs = 100   | 0.400  |
+| Trial 5  |  Batch Size = 50, Num of Epochs = 100                        | 0.296  |
+| Trial 6  |  Three-Layer Network      |   0.394  |
+| [Trial 7](model_training_trial_7.html)  |  Three-Layer Network, Batch Size = 50, Num of Epochs = 100   | 0.400  |
 
 #### Baseline
 ![Loss Curve](figures/Run2.png)
@@ -42,4 +45,5 @@ The decoder is to up-sample the output from 1x1 convolution layer to the same si
 
 ### Limitations
 
-### weights
+### Weights
+[I'm an inline-style link](https://www.google.com)
