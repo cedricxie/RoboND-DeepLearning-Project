@@ -43,7 +43,9 @@ The decoder is to up-sample the output from 1x1 convolution layer to the same si
 ![Loss Curve](figures/Run2.png)
 ![Final Score](figures/Run2_Score.png)
 
-### Limitations
-
 ### Weights
 [I'm an inline-style link](https://www.google.com)
+
+### Limitations
+
+The model would not be able to
