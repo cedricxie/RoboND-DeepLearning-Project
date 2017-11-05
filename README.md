@@ -8,11 +8,24 @@ In this project, you will train a deep neural network to identify and track a ta
 
 ### Fully Convolutional Neural Network Model
 
+A fully convolutional neural network (FCN) with the encoder-decoder structure of is implemented in the project. The architecture of the model is demonstrated in the following figure. The sizes of each layer is described.
+
 ![Network Model](figures/network1.png)
 
-An encoder-decoder structure of a fully convolutional neural network (FCN) is implemented in the project.
+#### Encoder
+The encoder here with separable convolution is to extract features in the image. The separable convolutions have fewer parameters compared to traditional convolutions and their advantages are:
+1. Efficiency
+2. Reducing over-fitting.
 
+#### 1 by 1 Convolutions
+1. The fully connected layer is used for classification of multiple classes.
+1. When we transform the output of a convolutional layer into a fully connected layer, it is flattened into a 2D tensor. This leads to the loss of spatial information due to the missing informatio of the position in the image.
+2. This could be avoided using 1x1 convolutions.
 
+#### Decoder
+The decoder is to up-sample the output from 1x1 convolution layer to the same size as the input image using transpose convolution.
+
+### Parameters
 | Tables   |      Are                                                     |  Score |
 |----------|:------------------------------------------------------------:|-------:|
 | Baseline |  Learning Rate = 0.002; Batch Size = 100, Num of Epochs = 50 | 0.403  |
@@ -20,4 +33,13 @@ An encoder-decoder structure of a fully convolutional neural network (FCN) is im
 | Trial 2  |  Learning Rate = 0.0025   |   0.355  |
 | Trial 3  |  Learning Rate = 0.0015   |   0.330  |
 | Trial 4  |  Batch Size = 50          |   0.399  |
-| Trial 5  |  Three-Layer Network      |   0.395  |
+| Trial 5  |  Three-Layer Network      |   0.394  |
+| Trial 5  |  Three-Layer Network, Batch Size = 50, Num of Epochs = 100   | 0.400  |
+
+#### Baseline
+![Loss Curve](figures/Run2.png)
+![Final Score](figures/Run2_Score.png)
+
+### Limitations
+
+### weights
