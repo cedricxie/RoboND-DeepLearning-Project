@@ -32,8 +32,8 @@ The encoder here with separable convolution is employed to extract features in t
 
 #### 1 by 1 Convolutions
 1. The fully connected layer is used for classification of multiple classes.
-1. When we transform the output of a convolutional layer into a fully connected layer, it is flattened into a 2D tensor. This leads to the loss of spatial information due to the missing information of the position in the image.
-2. This could be avoided using 1x1 convolutions.
+2. When we transform the output of a convolution layer into a fully connected layer, it is flattened into a 2D tensor. This leads to the loss of spatial information due to the missing information of the position in the image. And this could be avoided using 1x1 convolutions.
+3. In addition, the 1x1 convolution layer has a parameter, namely, the number of filters, which is a parameter that could be tweaked.
 
 #### Decoder
 The decoder is to up-sample the output from 1x1 convolution layer to the same size as the input image using bilinear upsampling.
